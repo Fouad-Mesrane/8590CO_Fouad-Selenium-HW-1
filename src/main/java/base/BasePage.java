@@ -65,11 +65,11 @@ public class BasePage {
         }
     }
 
-    @AfterMethod ()
+   /* @AfterMethod ()
     public void cleanUp() {
         driver.close();
         driver.quit();
-    }
+    }*/
 
     @Parameters()
     @AfterMethod(alwaysRun = true)
@@ -239,6 +239,7 @@ public class BasePage {
     // endregion
 
     // region Helper Methods
+
     private static void driverInit(String browser, long explicit_timeout, long fluent_timeout, long polling_interval) {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
